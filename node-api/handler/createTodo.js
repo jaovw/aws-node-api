@@ -8,7 +8,7 @@ module.exports.createTodo = async (event) => {
 
     const timestamp = new Date().getTime()
     const data = JSON.parse(event.body)
-  
+    // DEVIDO AS DEFINICOES NO .YML COM KEYS JA CONFIGURADAS, NECESSARIO USAR O USERID 
     const newItem = {
         userId: uuid.v1(),
         todo: data.todo,
