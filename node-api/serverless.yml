@@ -40,6 +40,13 @@ functions:
           path: todos
           method: get
           cors: true
+  get:
+    handler: handler/getTodo.getTodo
+    events:
+      - http:
+          path: todos/{userId}
+          method: get
+          cors: true
 
 # PROPRIEDADES DA TABELA, NOME E CHAVE VIERAM PREDEFINIDAS, POR ISSO O MOTIVO DE USAR O USERID NO HANDLER
 resources:
