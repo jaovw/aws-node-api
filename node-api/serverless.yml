@@ -31,28 +31,35 @@ functions:
     events:
       - http:
           path: todos
-          method: post
+          method: POST
           cors: true
   list:
     handler: handler/listTodo.listTodo
     events:
       - http:
           path: todos
-          method: get
+          method: GET
           cors: true
   get:
     handler: handler/getTodo.getTodo
     events:
       - http:
           path: todos/{userId}
-          method: get
+          method: GET
+          cors: true
+  update:
+    handler: handler/updateTodo.updateTodo
+    events:
+      - http:
+          path: todos/{userId}
+          method: PUT
           cors: true
   delete:
     handler: handler/deleteTodo.deleteTodo
     events:
       - http:
           path: todos/{userId}
-          method: delete
+          method: DELETE
           cors: true
 
 # PROPRIEDADES DA TABELA, NOME E CHAVE VIERAM PREDEFINIDAS, POR ISSO O MOTIVO DE USAR O USERID NO HANDLER
